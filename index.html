@@ -901,6 +901,44 @@
 
     </script>
     <!-- javascript -->
+    <style>
+        .cookie-consent {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99999;
+        }
+
+        .cookie-consent button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <div class="cookie-consent">
+        <div>
+            Utilizamos cookies para mejorar su experiencia en nuestro sitio web. Al continuar utilizando nuestro sitio web, usted acepta las
+            uso de cookies.
+        </div>
+        <button onclick="acceptCookies()">Aceptar</button>
+    </div>
+    <script>
+        function acceptCookies() {
+            document.querySelector('.cookie-consent').style.display = 'none';
+            // Setze Cookie, um die Benachrichtigung in Zukunft auszublenden
+            document.cookie = "cookie_consent=accepted; path=/; max-age=" + (60 * 60 * 24 * 365);
+        }
+
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
