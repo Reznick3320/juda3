@@ -303,6 +303,11 @@ hr {
   margin-left: 20px;
 }
 
+.logo {
+  color: #06d19c;
+  font-weight: 500;
+}
+
 .logo .logo-light {
   display: inline-block;
 }
